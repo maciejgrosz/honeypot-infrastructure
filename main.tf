@@ -3,6 +3,7 @@
 
 provider "aws" {
   region = var.region
+  profile = "sandbox"
 }
 
 # Filter out local zones, which are not currently supported 
@@ -15,7 +16,7 @@ data "aws_availability_zones" "available" {
 }
 
 locals {
-  cluster_name = "education-eks-${random_string.suffix.result}"
+  cluster_name = "honeypot-eks-${random_string.suffix.result}"
 }
 
 resource "random_string" "suffix" {
@@ -27,7 +28,7 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.0.0"
 
-  name = "education-vpc"
+  name = "honeypot-vpc"
 
   cidr = "10.0.0.0/16"
   azs  = slice(data.aws_availability_zones.available.names, 0, 3)
@@ -48,6 +49,21 @@ module "vpc" {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
     "kubernetes.io/role/internal-elb"             = 1
   }
+}
+
+resource "aws_security_group" "eks_node" {
+  name        = "eks-node-sg"
+  description = "Security group for EKS worker nodes"
+  vpc_id      = module.vpc.vpc_id
+}
+
+resource "aws_security_group_rule" "eks_node_ssh" {
+  type        = "ingress"
+  from_port   = 2222
+  to_port     = 2222
+  protocol    = "tcp"
+  cidr_blocks = ["213.134.188.140/32"]
+  security_group_id = aws_security_group.eks_node.id
 }
 
 module "eks" {
@@ -73,18 +89,9 @@ module "eks" {
       instance_types = ["t3.small"]
 
       min_size     = 1
-      max_size     = 3
-      desired_size = 2
-    }
-
-    two = {
-      name = "node-group-2"
-
-      instance_types = ["t3.small"]
-
-      min_size     = 1
-      max_size     = 2
-      desired_size = 1
+      max_size     = 1
+      desired_size = 1 
+      public_ip    = true
     }
   }
 }
