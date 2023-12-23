@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cowrie-config
+data:
+  cowrie.cfg: |
+  
+    [output_jsonlog]
+    logfile = /var/log/cowrie/cowrie.log
+
+    [output_textlog]
+    type = stdout
+    ; log all to a timestamped file
+    file = /var/log/cowrie/cowrie.log.%Y%m%d# 
+
+# [ssh]
+# listen_endpoints = tcp:2222:interface=0.0.0.0
+# password_auth = false
+
+# [output_textlog]
+# type = stdout
+# ; log all to a timestamped file
+# file = /var/log/cowrie/cowrie.log.%Y%m%d# 
+
+# [output_json]
+# enabled = true
+# log_level = DEBUG
+# ; log to a timestamped file
+# file = /var/log/cowrie/cowrie.json.%Y%m%d
+
+# [telnet]
+# enabled = true
+# listen_endpoints = tcp:2323:interface=0.0.0.0

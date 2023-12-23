@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cowrie-honeypot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cowrie  # Update to match the label selector used in the LoadBalancer service
+  template:
+    metadata:
+      labels:
+        app: cowrie  # Make sure this label matches the LoadBalancer's selector
+    spec:
+      containers:
+      - name: cowrie-honeypot
+        image: cowrie/cowrie
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "100m"
+          requests:
+            memory: "128Mi"
+            cpu: "50m"
+        volumeMounts:
+          - name: cowrie-config
+            mountPath: /etc/cowrie
+      volumes:
+        - name: cowrie-config
+          configMap:
+            name: cowrie-config

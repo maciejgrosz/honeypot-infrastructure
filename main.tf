@@ -68,7 +68,7 @@ resource "aws_security_group_rule" "eks_node_ssh" {
 
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "19.15.3"
+  version = "19.19.0"
 
   cluster_name    = local.cluster_name
   cluster_version = "1.27"
@@ -86,7 +86,7 @@ module "eks" {
     one = {
       name = "node-group-1"
 
-      instance_types = ["t3.small"]
+      instance_types = ["m5.large"]
 
       min_size     = 1
       max_size     = 1
