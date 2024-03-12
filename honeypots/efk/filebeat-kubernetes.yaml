@@ -143,7 +143,7 @@ data:
     output.elasticsearch:
       hosts: ['https://quickstart-es-http:9200']
       username: elastic
-      password: 663Mmlx1VnM8W0AlsO2Ei058
+      password: ${ELASTICSEARCH_PASSWORD}
       ssl.verification_mode: "none"
 ---
 apiVersion: apps/v1
@@ -181,7 +181,10 @@ spec:
         - name: ELASTICSEARCH_USERNAME
           value: elastic
         - name: ELASTICSEARCH_PASSWORD
-          value: changeme
+          valueFrom:
+            secretKeyRef:
+              name: quickstart-es-elastic-user
+              key: elastic
         - name: ELASTIC_CLOUD_ID
           value:
         - name: ELASTIC_CLOUD_AUTH

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: honeypot-lb-service
+spec:
+  selector:
+    app: honeypot  # Use a generic selector for all honeypots
+  ports:
+    - name: ssh
+      port: 22  # The external port you want to expose for SSH
+      targetPort: 2222  # The port your Cowrie pods are listening on
+    - name: http
+      port: 80  # The external port you want to expose for HTTP
+      targetPort: 8080  # The port your Dionea pods are listening on
+  type: LoadBalancer

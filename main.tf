@@ -1,6 +1,7 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
+
 provider "aws" {
   region = var.region
   profile = "sandbox"
@@ -16,7 +17,7 @@ data "aws_availability_zones" "available" {
 }
 
 locals {
-  cluster_name = "honeypot-eks-${random_string.suffix.result}"
+  cluster_name = "honeypot-eks-test"
 }
 
 resource "random_string" "suffix" {
@@ -92,6 +93,9 @@ module "eks" {
       max_size     = 1
       desired_size = 1 
       public_ip    = true
+
+      spot_price = "0.05"  # Specify the maximum price you're willing to pay for Spot Instances
+      capacity_type = "SPOT" 
     }
   }
 }

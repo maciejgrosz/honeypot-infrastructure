@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cowrie  # Update to match the label selector used in the LoadBalancer service
+      app: honeypot  
   template:
     metadata:
       labels:
-        app: cowrie  # Make sure this label matches the LoadBalancer's selector
+        app: honeypot  # Make sure this label matches the LoadBalancer's selector
     spec:
       containers:
       - name: cowrie-honeypot
