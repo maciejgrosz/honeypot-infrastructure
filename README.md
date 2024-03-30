@@ -18,3 +18,7 @@ ksand port-forward service/quickstart-kb-http 5601 -n kube-system
 
 cuckoo sandbox - analiza statyczna, wywolanie programow, kasowanie plikow
 virustotal - reguly YARA
+  if self.remote.host != ip and "::ffff:" + self.remote.host != ip:
+  if self.remote.host != ip and self.remote.host != "::ffff:" + ip:
+  
+modul do rejestracji polaczen - p0f? 

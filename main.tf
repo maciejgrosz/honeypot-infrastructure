@@ -5,6 +5,11 @@
 provider "aws" {
   region = var.region
   profile = "sandbox"
+  default_tags {
+    tags = {
+      project = "honeypots"
+    }
+  }
 }
 
 # Filter out local zones, which are not currently supported 
@@ -58,12 +63,21 @@ resource "aws_security_group" "eks_node" {
   vpc_id      = module.vpc.vpc_id
 }
 
-resource "aws_security_group_rule" "eks_node_ssh" {
-  type        = "ingress"
-  from_port   = 2222
-  to_port     = 2222
-  protocol    = "tcp"
-  cidr_blocks = ["213.134.188.140/32"]
+# resource "aws_security_group_rule" "eks_node_ssh" {
+#   type        = "ingress"
+#   from_port   = 22
+#   to_port     = 22
+#   protocol    = "tcp"
+#   cidr_blocks = ["213.134.188.140/32"]
+#   security_group_id = aws_security_group.eks_node.id
+# }
+
+resource "aws_security_group_rule" "eks_node_ftp" {
+  type              = "ingress"
+  from_port         = 21
+  to_port           = 21
+  protocol          = "tcp"
+  cidr_blocks       = ["0.0.0.0/0"] # Adjust this CIDR block to limit access if necessary
   security_group_id = aws_security_group.eks_node.id
 }
 
@@ -126,4 +140,9 @@ resource "aws_eks_addon" "ebs-csi" {
     "eks_addon" = "ebs-csi"
     "terraform" = "true"
   }
+}
+
+
+resource "aws_ecr_repository" "honeypot_project" {
+  name = "honeypot-project-${lower(random_string.suffix.result)}"
 }

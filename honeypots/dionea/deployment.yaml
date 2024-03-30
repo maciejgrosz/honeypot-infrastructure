@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: honeypot 
-        image: dinotools/dionaea:latest
+        image: 042347303331.dkr.ecr.eu-west-1.amazonaws.com/honeypot-project-y25ek2lf:latest
         resources:
           limits:
             memory: "256Mi"
@@ -22,6 +22,4 @@ spec:
           requests:
             memory: "128Mi"
             cpu: "50m"
-        ports:
-        - containerPort: 8080
-          protocol: TCP
+

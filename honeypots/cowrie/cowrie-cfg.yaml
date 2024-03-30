@@ -13,9 +13,9 @@ data:
     ; log all to a timestamped file
     file = /var/log/cowrie/cowrie.log.%Y%m%d# 
 
-# [ssh]
-# listen_endpoints = tcp:2222:interface=0.0.0.0
-# password_auth = false
+    [ssh]
+    listen_endpoints = tcp:2222:interface=0.0.0.0
+    password_auth = false
 
 # [output_textlog]
 # type = stdout
