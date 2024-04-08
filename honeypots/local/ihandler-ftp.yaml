@@ -10,4 +10,4 @@
     active_host: "0.0.0.0"
 
     # ports for active ftp; string indicating a range
-    active_ports: 63001-64000
+    active_ports: 63090-64000

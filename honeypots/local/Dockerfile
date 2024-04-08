@@ -34,7 +34,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Clone Dionea repository
-RUN git clone --depth 1 --branch 0.10.0 https://github.com/DinoTools/dionaea.git /opt/dionaea
+RUN git clone https://github.com/DinoTools/dionaea.git /opt/dionaea
 
 # Set working directory
 WORKDIR /opt/dionaea
@@ -43,6 +43,7 @@ WORKDIR /opt/dionaea
 COPY dionaea.cfg /opt/dionaea/etc/dionaea/dionaea.cfg
 COPY ftp.yaml /opt/dionaea/etc/dionaea/services-enabled/
 COPY ftp.py /opt/dionaea/modules/python/dionaea/ftp.py 
+COPY ihandler-ftp.yaml /opt/dionaea/etc/dionaea/ihandlers-enabled/ftp.yaml
 
 # Build Dionea
 RUN mkdir build && \
