@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cowrie-loadbalancer
+spec:
+  selector:
+    app: cowrie   # The label that your Cowrie pods have
+  ports:
+    - name: ssh
+      port: 22 
+      targetPort: 2222
+  type: LoadBalancer

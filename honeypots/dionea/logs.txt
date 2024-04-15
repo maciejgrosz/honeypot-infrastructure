@@ -1,0 +1,254 @@
+[12042024 21:13:44] modules /code/src/modules.c:197-message: new module lib/dionaea/curl.so 0x56311620a720 fn 0x7f2ec13488d6
+[12042024 21:13:44] curl /code/modules/curl/module.c:593-debug: curl_new
+[12042024 21:13:44] curl /code/modules/curl/module.c:638-info: curl version 7.58.0 features:c-ares,idn,ipv6,largefile,ntlm,spnego,ssl,libz protocols:dict,file,ftp,ftps,gopher,http,https,imap,imaps,ldap,ldaps,pop3,pop3s,rtmp,rtsp,smb,smbs,smtp,smtps,telnet,tftp 
+[12042024 21:13:44] incident /code/src/incident.c:165-debug: ihandler_new pattern dionaea.download.offer cb 0x7f2ec134870d ctx (nil)
+[12042024 21:13:44] incident /code/src/incident.c:167-debug: ihandler 0x563116211d80 pattern dionaea.download.offer cb 0x7f2ec134870d ctx (nil)
+[12042024 21:13:44] incident /code/src/incident.c:165-debug: ihandler_new pattern dionaea.upload.request cb 0x7f2ec134870d ctx (nil)
+[12042024 21:13:44] incident /code/src/incident.c:167-debug: ihandler 0x563116211130 pattern dionaea.upload.request cb 0x7f2ec134870d ctx (nil)
+[12042024 21:13:44] modules /code/src/modules.c:197-message: new module lib/dionaea/python.so 0x56311620c270 fn 0x7f2ebbf9b868
+[12042024 21:13:44] python /code/modules/python/module.c:324-debug: new /code/modules/python/module.c 0x5631161aef10
+[12042024 21:13:44] python /code/modules/python/module.c:328-debug: Python Interpreter /usr/bin/python3.6
+[12042024 21:13:44] python /code/modules/python/module.c:366-debug: running sys.path.insert(0, 'lib/dionaea/python') default
+[12042024 21:13:44] services /dionaea/services.py:114-info: Initializing services ...
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.blackhole
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.cmd
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.core
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.echo
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.emu
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.emu_scripts
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.exception
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.fail2ban
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.ftp
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.ftp_download
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.hpfeeds
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.http
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.ihandlers
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.log
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.log_db_sql
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.log_incident
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.log_json
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.logsql
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.memcache
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.mirror
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.mongo
+[12042024 21:13:44] asn1fields /dionaea/smb/include/asn1fields.py:156-debug: i2s {0: 'completed', 1: 'incomplete', 2: 'reject'}
+[12042024 21:13:44] asn1fields /dionaea/smb/include/asn1fields.py:157-debug: s2i {'completed': 0, 'incomplete': 1, 'reject': 2}
+[12042024 21:13:44] asn1fields /dionaea/smb/include/asn1fields.py:338-debug: self.choice {48: <class 'dionaea.smb.include.gssapifields.NegTokenInit'>}
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.mqtt
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.mssql
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module di[12042024 21:13:44] modules /code/src/modules.c:197-message: new module lib/dionaea/curl.so 0x56311620a720 fn 0x7f2ec13488d6
+[12042024 21:13:44] curl /code/modules/curl/module.c:593-debug: curl_new
+[12042024 21:13:44] curl /code/modules/curl/module.c:638-info: curl version 7.58.0 features:c-ares,idn,ipv6,largefile,ntlm,spnego,ssl,libz protocols:dict,file,ftp,ftps,gopher,http,https,imap,imaps,ldap,ldaps,pop3,pop3s,rtmp,rtsp,smb,smbs,smtp,smtps,telnet,tftp 
+[12042024 21:13:44] incident /code/src/incident.c:165-debug: ihandler_new pattern dionaea.download.offer cb 0x7f2ec134870d ctx (nil)
+[12042024 21:13:44] incident /code/src/incident.c:167-debug: ihandler 0x563116211d80 pattern dionaea.download.offer cb 0x7f2ec134870d ctx (nil)
+[12042024 21:13:44] incident /code/src/incident.c:165-debug: ihandler_new pattern dionaea.upload.request cb 0x7f2ec134870d ctx (nil)
+[12042024 21:13:44] incident /code/src/incident.c:167-debug: ihandler 0x563116211130 pattern dionaea.upload.request cb 0x7f2ec134870d ctx (nil)
+[12042024 21:13:44] modules /code/src/modules.c:197-message: new module lib/dionaea/python.so 0x56311620c270 fn 0x7f2ebbf9b868
+[12042024 21:13:44] python /code/modules/python/module.c:324-debug: new /code/modules/python/module.c 0x5631161aef10
+[12042024 21:13:44] python /code/modules/python/module.c:328-debug: Python Interpreter /usr/bin/python3.6
+[12042024 21:13:44] python /code/modules/python/module.c:366-debug: running sys.path.insert(0, 'lib/dionaea/python') default
+[12042024 21:13:44] services /dionaea/services.py:114-info: Initializing services ...
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.blackhole
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.cmd
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.core
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.echo
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.emu
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.emu_scripts
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.exception
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.fail2ban
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.ftp
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.ftp_download
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.hpfeeds
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.http
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.ihandlers
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.log
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.log_db_sql
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.log_incident
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.log_json
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.logsql
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.memcache
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.mirror
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.mongo
+[12042024 21:13:44] asn1fields /dionaea/smb/include/asn1fields.py:156-debug: i2s {0: 'completed', 1: 'incomplete', 2: 'reject'}
+[12042024 21:13:44] asn1fields /dionaea/smb/include/asn1fields.py:157-debug: s2i {'completed': 0, 'incomplete': 1, 'reject': 2}
+[12042024 21:13:44] asn1fields /dionaea/smb/include/asn1fields.py:338-debug: self.choice {48: <class 'dionaea.smb.include.gssapifields.NegTokenInit'>}
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.mqtt
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.mssql
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.mysql
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.ndrlib
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.nfq
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.p0f
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.pptp
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.printer
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.s3
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.services
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.sip
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.smb
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.store
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.submit_http
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.submit_http_post
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.tftp
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.upnp
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.util
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.virustotal
+[12042024 21:13:44] ihandlers /dionaea/ihandlers.py:25-info: Load iHandlers
+[12042024 21:13:44] python /code/modules/python/module.c:407-debug: Interactive Python shell
+[12042024 21:13:44] incident /code/src/incident.c:165-debug: ihandler_new pattern dionaea.*.mkshell cb 0x7f2ebbf9a890 ctx (nil)
+[12042024 21:13:44] incident /code/src/incident.c:167-debug: ihandler 0x5631162e6740 pattern dionaea.*.mkshell cb 0x7f2ebbf9a890 ctx (nil)
+[12042024 21:13:44] modules /code/src/modules.c:197-message: new module lib/dionaea/emu.so 0x56311620db10 fn 0x7f2ebb2adc19
+[12042024 21:13:44] emu /code/modules/emu/module.c:37-debug: emu_new
+[12042024 21:13:44] dionaea /code/src/dionaea.c:669-debug: Creating processors tree
+[12042024 21:13:44] processor /code/src/processor.c:25-debug: processors_tree_create - processor: filter_streamdumper
+[12042024 21:13:44] processor /code/src/processor.c:707-debug: Key file does not have key “config.allow.0.protocols” in group “processor.filter_streamdumper”
+[12042024 21:13:44] processor /code/src/processor.c:744-debug: Key file does not have key “config.deny.0.types” in group “processor.filter_streamdumper”
+[12042024 21:13:44] processor /code/src/processor.c:744-debug: Key file does not have key “config.deny.0.types” in group “processor.filter_streamdumper”
+[12042024 21:13:44] processor /code/src/processor.c:629-debug: Dumping filter rules ...
+[12042024 21:13:44] processor /code/src/processor.c:638-debug: allow:
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - protocol  
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - type  
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - accept
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - protocol  
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - ftpctrl
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - type  
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - connect
+[12042024 21:13:44] processor /code/src/processor.c:638-debug: deny:
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - protocol  
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - ftpdata
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - ftpdatacon
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - xmppclient
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - type  
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - protocol  
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - ftpdata
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - ftpdatacon
+[1204onaea.mysql
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.ndrlib
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.nfq
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.p0f
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.pptp
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.printer
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.s3
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.services
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.sip
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.smb
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.store
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.submit_http
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.submit_http_post
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.tftp
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.upnp
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.util
+[12042024 21:13:44] dionaea /dionaea/__init__.py:148-info: Import module dionaea.virustotal
+[12042024 21:13:44] ihandlers /dionaea/ihandlers.py:25-info: Load iHandlers
+[12042024 21:13:44] python /code/modules/python/module.c:407-debug: Interactive Python shell
+[12042024 21:13:44] incident /code/src/incident.c:165-debug: ihandler_new pattern dionaea.*.mkshell cb 0x7f2ebbf9a890 ctx (nil)
+[12042024 21:13:44] incident /code/src/incident.c:167-debug: ihandler 0x5631162e6740 pattern dionaea.*.mkshell cb 0x7f2ebbf9a890 ctx (nil)
+[12042024 21:13:44] modules /code/src/modules.c:197-message: new module lib/dionaea/emu.so 0x56311620db10 fn 0x7f2ebb2adc19
+[12042024 21:13:44] emu /code/modules/emu/module.c:37-debug: emu_new
+[12042024 21:13:44] dionaea /code/src/dionaea.c:669-debug: Creating processors tree
+[12042024 21:13:44] processor /code/src/processor.c:25-debug: processors_tree_create - processor: filter_streamdumper
+[12042024 21:13:44] processor /code/src/processor.c:707-debug: Key file does not have key “config.allow.0.protocols” in group “processor.filter_streamdumper”
+[12042024 21:13:44] processor /code/src/processor.c:744-debug: Key file does not have key “config.deny.0.types” in group “processor.filter_streamdumper”
+[12042024 21:13:44] processor /code/src/processor.c:744-debug: Key file does not have key “config.deny.0.types” in group “processor.filter_streamdumper”
+[12042024 21:13:44] processor /code/src/processor.c:629-debug: Dumping filter rules ...
+[12042024 21:13:44] processor /code/src/processor.c:638-debug: allow:
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - protocol  
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - type  
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - accept
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - protocol  
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - ftpctrl
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - type  
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - connect
+[12042024 21:13:44] processor /code/src/processor.c:638-debug: deny:
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - protocol  
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - ftpdata
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - ftpdatacon
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - xmppclient
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - type  
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - protocol  
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - ftpdata
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - ftpdatacon
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - xmppclient
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - type  
+[12042024 21:13:44] processor /code/src/processor.c:25-debug: processors_tree_create - processor: streamdumper
+[12042024 21:13:44] processor /code/src/processor.c:339-info: /opt/dionaea/var/lib/dionaea/bistreams/2024-04-12/ <-> /opt/dionaea/var/lib/dionaea/bistreams/%Y-%m-%d/
+[12042024 21:13:44] dionaea /code/src/dionaea.c:676-debug: processo: filter_streamdumper
+[12042024 21:13:44] processor /code/src/processor.c:25-debug: processors_tree_create - processor: filter_emu
+[12042024 21:13:44] processor /code/src/processor.c:718-debug: Key file does not have key “config.allow.0.types” in group “processor.filter_emu”
+[12042024 21:13:44] processor /code/src/processor.c:629-debug: Dumping filter rules ...
+[12042024 21:13:44] processor /code/src/processor.c:638-debug: allow:
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - protocol  
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - smbd
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - epmapper
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - nfqmirrord
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - mssqld
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - type  
+[12042024 21:13:44] processor /code/src/processor.c:25-debug: processors_tree_create - processor: emu
+[12042024 21:13:44] emu /code/modules/emu/detect.c:39-debug: proc_emu_ctx_cfg_new node
+[12042024 21:13:44] emu /code/modules/emu/detect.c:86-debug:  files 3 filesize 524288 sockets 3 steps 1073741824 idle 30.000000 listen 30.000000 sustain 120.000000 cpu 120.000000 
+[12042024 21:13:44] dionaea /code/src/dionaea.c:676-debug: processo: filter_emu
+[12042024 21:13:44] processor /code/src/processor.c:71-debug:      filter
+[12042024 21:13:44] processor /code/src/processor.c:71-debug:          streamdumper
+[12042024 21:13:44] processor /code/src/processor.c:71-debug:      filter
+[12042024 21:13:44] processor /code/src/processor.c:71-debug:          emu
+[12042024 21:13:44] dionaea /code/src/dionaea.c:726-debug: old umask -----w--w-
+[12042024 21:13:44] dionaea /code/src/dionaea.c:727-debug: new umask -----w--w-
+[12042024 21:13:44] dionaea /code/src/dionaea.c:742-info: Using 1048576 as limit for fds
+[12042024 21:13:44] modules /code/src/modules.c:184-message: start module 0x56311620a720
+[12042024 21:13:44] modules /code/src/modules.c:184-message: start module 0x56311620c270
+[12042024 21:13:44] python /code/modules/python/module.c:293-info: start /code/modules/python/module.c
+[12042024 21:13:44] python /code/modules/python/module.c:303-info: start dionaea.log 0x563116201a30 0x7f2ebad1b9a8
+[12042024 21:13:44] python /code/modules/python/module.c:303-info: start dionaea.services 0x563116201f70 0x7f2ebad1bb88
+[12042024 21:13:44] services /dionaea/services.py:164-info: Starting services ...
+[12042024 21:13:44] services /dionaea/services.py:32-info: Starting services on interface eth0 ...
+[12042024 21:13:44] services /dionaea/services.py:34-info: Bind interfaces to address '10.0.1.98' ...
+[12042024 21:13:44] services /dionaea/services.py:34-info: Bind interfaces to address 'fe80::e8dd:8cff:feab:6e06' ...
+[12042024 21:13:44] services /dionaea/services.py:32-info: Starting services on interface lo ...
+[12042024 21:13:44] services /dionaea/services.py:34-info: Bind interfaces to address '127.0.0.1' ...
+[12042024 21:13:44] services /dionaea/services.py:34-info: Bind interfaces to address '::1' ...
+[12042024 21:13:44] python /code/modules/python/module.c:303-info: start dionaea.ihandlers 0x563116202710 0x7f2eb95f9b38
+[12042024 21:13:44] ihandlers /dionaea/ihandlers.py:36-info: START THE IHANDLERS
+[12042024 21:13:44] modules /code/src/modules.c:184-message: start module 0x56311620db10
+[12042024 21:13:44] dionaea /code/src/dionaea.c:774-info: Installing signal handlers
+[12042024 21:13:44] dionaea /code/src/dionaea.c:811-message: Creating 2 threads in pool
+[12042024 21:13:44] dionaea /code/sr2024 21:13:44] processor /code/src/processor.c:654-debug:   - xmppclient
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - type  
+[12042024 21:13:44] processor /code/src/processor.c:25-debug: processors_tree_create - processor: streamdumper
+[12042024 21:13:44] processor /code/src/processor.c:339-info: /opt/dionaea/var/lib/dionaea/bistreams/2024-04-12/ <-> /opt/dionaea/var/lib/dionaea/bistreams/%Y-%m-%d/
+[12042024 21:13:44] dionaea /code/src/dionaea.c:676-debug: processo: filter_streamdumper
+[12042024 21:13:44] processor /code/src/processor.c:25-debug: processors_tree_create - processor: filter_emu
+[12042024 21:13:44] processor /code/src/processor.c:718-debug: Key file does not have key “config.allow.0.types” in group “processor.filter_emu”
+[12042024 21:13:44] processor /code/src/processor.c:629-debug: Dumping filter rules ...
+[12042024 21:13:44] processor /code/src/processor.c:638-debug: allow:
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - protocol  
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - smbd
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - epmapper
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - nfqmirrord
+[12042024 21:13:44] processor /code/src/processor.c:654-debug:   - mssqld
+[12042024 21:13:44] processor /code/src/processor.c:645-debug: - type  
+[12042024 21:13:44] processor /code/src/processor.c:25-debug: processors_tree_create - processor: emu
+[12042024 21:13:44] emu /code/modules/emu/detect.c:39-debug: proc_emu_ctx_cfg_new node
+[12042024 21:13:44] emu /code/modules/emu/detect.c:86-debug:  files 3 filesize 524288 sockets 3 steps 1073741824 idle 30.000000 listen 30.000000 sustain 120.000000 cpu 120.000000 
+[12042024 21:13:44] dionaea /code/src/dionaea.c:676-debug: processo: filter_emu
+[12042024 21:13:44] processor /code/src/processor.c:71-debug:      filter
+[12042024 21:13:44] processor /code/src/processor.c:71-debug:          streamdumper
+[12042024 21:13:44] processor /code/src/processor.c:71-debug:      filter
+[12042024 21:13:44] processor /code/src/processor.c:71-debug:          emu
+[12042024 21:13:44] dionaea /code/src/dionaea.c:726-debug: old umask -----w--w-
+[12042024 21:13:44] dionaea /code/src/dionaea.c:727-debug: new umask -----w--w-
+[12042024 21:13:44] dionaea /code/src/dionaea.c:742-info: Using 1048576 as limit for fds
+[12042024 21:13:44] modules /code/src/modules.c:184-message: start module 0x56311620a720
+[12042024 21:13:44] modules /code/src/modules.c:184-message: start module 0x56311620c270
+[12042024 21:13:44] python /code/modules/python/module.c:293-info: start /code/modules/python/module.c
+[12042024 21:13:44] python /code/modules/python/module.c:303-info: start dionaea.log 0x563116201a30 0x7f2ebad1b9a8
+[12042024 21:13:44] python /code/modules/python/module.c:303-info: start dionaea.services 0x563116201f70 0x7f2ebad1bb88
+[12042024 21:13:44] services /dionaea/services.py:164-info: Starting services ...
+[12042024 21:13:44] services /dionaea/services.py:32-info: Starting services on interface eth0 ...
+[12042024 21:13:44] services /dionaea/services.py:34-info: Bind interfaces to address '10.0.1.98' ...
+[12042024 21:13:44] services /dionaea/services.py:34-info: Bind interfaces to address 'fe80::e8dd:8cff:feab:6e06' ...
+[12042024 21:13:44] services /dionaea/services.py:32-info: Starting services on interface lo ...
+[12042024 21:13:44] services /dionaea/services.py:34-info: Bind interfaces to address '127.0.0.1' ...
+[12042024 21:13:44] services /dionaea/services.py:34-info: Bind interfaces to address '::1' ...
+[12042024 21:13:44] python /code/modules/python/module.c:303-info: start dionaea.ihandlers 0x563116202710 0x7f2eb95f9b38
+[12042024 21:13:44] ihandlers /dionaea/ihandlers.py:36-info: START THE IHANDLERS
+[12042024 21:13:44] modules /code/src/modules.c:184-message: start module 0x56311620db10
+[12042024 21:13:44] dionaea /code/src/dionaea.c:774-info: Installing signal handlers
+[12042024 21:13:44] dionaea /code/src/dionaea.c:811-message: Creating 2 threads in pool

@@ -44,7 +44,8 @@ COPY dionaea.cfg /opt/dionaea/etc/dionaea/dionaea.cfg
 COPY ftp.yaml /opt/dionaea/etc/dionaea/services-enabled/
 COPY ftp.py /opt/dionaea/modules/python/dionaea/ftp.py 
 COPY ihandler-ftp.yaml /opt/dionaea/etc/dionaea/ihandlers-enabled/ftp.yaml
-
+COPY ftp_download.py /opt/dionaea/modules/python/dionaea/ftp_download.py
+COPY services.py /opt/dionaea/modules/python/dionaea/services.py
 # Build Dionea
 RUN mkdir build && \
     cd build && \
@@ -53,4 +54,9 @@ RUN mkdir build && \
     make install
 
 # Entry point
-CMD ["/opt/dionaea/bin/dionaea"]
+# CMD ["/opt/dionaea/bin/dionaea -c /opt/dionaea/etc/dionaea/dionaea.cfg"]
+# COPY entrypoint.sh . 
+# ENTRYPOINT [ "./entrypoint.sh" ]
+# CMD ["/opt/dionaea/bin/dionaea]
+CMD ["bash"]
+# CMD ["/opt/dionaea/bin/dionaea -c /opt/dionaea/etc/dionaea/dionaea.cfg"]

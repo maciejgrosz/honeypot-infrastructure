@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dionaea-loadbalancer
+spec:
+  selector:
+    app: dionaea   # The label that your Dionaea pods have
+  ports:
+    - name: ftp
+      port: 21
+      targetPort: 21
+  type: LoadBalancer

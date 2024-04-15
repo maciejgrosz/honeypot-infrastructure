@@ -37,10 +37,10 @@ module "vpc" {
   name = "honeypot-vpc"
 
   cidr = "10.0.0.0/16"
-  azs  = slice(data.aws_availability_zones.available.names, 0, 3)
+  azs  = slice(data.aws_availability_zones.available.names, 0, 2)
 
-  private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
-  public_subnets  = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
+  private_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
+  public_subnets  = ["10.0.4.0/24", "10.0.5.0/24"]
 
   enable_nat_gateway   = true
   single_nat_gateway   = true
@@ -48,38 +48,15 @@ module "vpc" {
 
   public_subnet_tags = {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
-    "kubernetes.io/role/elb"                      = 1
+    # "kubernetes.io/role/elb"                      = 1
   }
 
   private_subnet_tags = {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
-    "kubernetes.io/role/internal-elb"             = 1
+    # "kubernetes.io/role/internal-elb"             = 1
   }
 }
 
-resource "aws_security_group" "eks_node" {
-  name        = "eks-node-sg"
-  description = "Security group for EKS worker nodes"
-  vpc_id      = module.vpc.vpc_id
-}
-
-# resource "aws_security_group_rule" "eks_node_ssh" {
-#   type        = "ingress"
-#   from_port   = 22
-#   to_port     = 22
-#   protocol    = "tcp"
-#   cidr_blocks = ["213.134.188.140/32"]
-#   security_group_id = aws_security_group.eks_node.id
-# }
-
-resource "aws_security_group_rule" "eks_node_ftp" {
-  type              = "ingress"
-  from_port         = 21
-  to_port           = 21
-  protocol          = "tcp"
-  cidr_blocks       = ["0.0.0.0/0"] # Adjust this CIDR block to limit access if necessary
-  security_group_id = aws_security_group.eks_node.id
-}
 
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
@@ -101,7 +78,7 @@ module "eks" {
     one = {
       name = "node-group-1"
 
-      instance_types = ["m5.large"]
+      instance_types = ["t2.small"]
 
       min_size     = 1
       max_size     = 1
@@ -140,9 +117,4 @@ resource "aws_eks_addon" "ebs-csi" {
     "eks_addon" = "ebs-csi"
     "terraform" = "true"
   }
-}
-
-
-resource "aws_ecr_repository" "honeypot_project" {
-  name = "honeypot-project-${lower(random_string.suffix.result)}"
 }

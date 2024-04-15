@@ -8,7 +8,7 @@ spec:
   ports:
     - name: ssh
       port: 22  # The external port you want to expose for SSH
-      targetPort: 2222  # The port your Cowrie pods are listening on
+      targetPort: 22  # The port your Cowrie pods are listening on
     - name: ftp 
       port: 21  # The external port you want to expose for HTTP
       targetPort: 21  # The port your Dionea pods are listening on

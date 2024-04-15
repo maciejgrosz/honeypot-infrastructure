@@ -296,6 +296,7 @@ class FTPd(connection):
         self.dtf = FTPDataListen(host=self.local.host, port=0, ctrl=self)
         host = self.dtf.local.host
         port = self.dtf.local.port
+        logger.warn(self.dtf)
         logger.warn(f'passive host: {host}:{port}')
         
         self.reply("entering_pasv_mode", host=encodeHostPort(host, port))
@@ -396,8 +397,9 @@ class FTPd(connection):
             return
 
     def ftp_LIST(self, p=None):
+        logger.warn("ftp_LIST")
         name = self.real_path(p)
-
+        logger.warn(f"ftp_LIST {name}")
         if not name.startswith(self.basedir):
             self.reply("file_not_found", filename=p)
             return
@@ -693,7 +695,9 @@ class FTPDataListen(FTPDataCon):
         FTPDataCon.__init__(self, ctrl)
         if host is not None:
             self.bind(host, port)
+            logger.warn(f"init data listen port: {host}:{port}")
             self.listen(1)
+            logger.warn(f"listen(1){self.listen(1)}")
             if ctrl.limits:
                 self._out.throttle = ctrl.limits['_out']
 

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dionaea 
+  labels:
+    app: honeypot
+spec:
+  containers:
+  - name: dionaea
+    image: dinotools/dionaea
+    command: ["/bin/sh"]
+    args: ["-c", "sleep infinity"]
